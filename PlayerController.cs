@@ -19,4 +19,14 @@ public class PlayerController : MonoBehaviour {
 		Vector2 movement = new Vector2 (moveHorizontal, moveVertical);
 		rb2d.AddForce (movement * speed);
 	}
+
+	//This causes code to be executed whenever the object touches another collider
+	void OnTriggerEnter2D(Collider2D other)
+	{
+		//CHeck to see if collider "other" is tagged "pickup"
+		if (other.gameObject.CompareTag ("PickUp")) 
+		{
+			other.gameObject.SetActive (false);
+		}
+	}
 }
