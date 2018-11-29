@@ -1,0 +1,11 @@
+#ignore all files
+*
+
+#except these files
+!CameraContoller.cs
+!PlayerController.cs
+!Rotator.cs
+!README.md
+!.gitignore
+!*/Builds/*
+
